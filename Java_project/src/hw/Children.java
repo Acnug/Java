@@ -3,47 +3,47 @@ package hw;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/* Вся семья в сборе
-1. Создать класс Human с полями имя (String), пол (boolean), возраст (int), дети (ArrayList<Human>).
-2. Создать объекты и заполнить их так, чтобы получилось: два дедушки, две бабушки, отец, мать, трое детей.
-3. Вывести все объекты Human на экран.
+/* Р’СЃСЏ СЃРµРјСЊСЏ РІ СЃР±РѕСЂРµ
+1. РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ Human СЃ РїРѕР»СЏРјРё РёРјСЏ (String), РїРѕР» (boolean), РІРѕР·СЂР°СЃС‚ (int), РґРµС‚Рё (ArrayList<Human>).
+2. РЎРѕР·РґР°С‚СЊ РѕР±СЉРµРєС‚С‹ Рё Р·Р°РїРѕР»РЅРёС‚СЊ РёС… С‚Р°Рє, С‡С‚РѕР±С‹ РїРѕР»СѓС‡РёР»РѕСЃСЊ: РґРІР° РґРµРґСѓС€РєРё, РґРІРµ Р±Р°Р±СѓС€РєРё, РѕС‚РµС†, РјР°С‚СЊ, С‚СЂРѕРµ РґРµС‚РµР№.
+3. Р’С‹РІРµСЃС‚Рё РІСЃРµ РѕР±СЉРµРєС‚С‹ Human РЅР° СЌРєСЂР°РЅ.
 */
 
 public class Children
 {
     public static void main(String[] args) throws IOException
     {
-        //Создаём новые объекты детей
-        Human dete1 = new Human("Гриша", true, 15);
-        Human dete2 = new Human("Толя", true, 22);
-        Human dete3 = new Human("Марина", false, 18);
+        //РЎРѕР·РґР°С‘Рј РЅРѕРІС‹Рµ РѕР±СЉРµРєС‚С‹ РґРµС‚РµР№
+        Human dete1 = new Human("Р“СЂРёС€Р°", true, 15);
+        Human dete2 = new Human("РўРѕР»СЏ", true, 22);
+        Human dete3 = new Human("РњР°СЂРёРЅР°", false, 18);
 
-        //Добавляем объекты в список deti
+        //Р”РѕР±Р°РІР»СЏРµРј РѕР±СЉРµРєС‚С‹ РІ СЃРїРёСЃРѕРє deti
         ArrayList<Human> deti = new ArrayList<>();
         deti.add(dete1);
         deti.add(dete2);
         deti.add(dete3);
-        //Создаем новый объект "отец"
-        Human otec = new Human("Петр", true, 53, deti);
-        //Создаем новый объект "мать"
-        Human matb = new Human("Надя", false, 45, deti);
-        //Создаем объекты 2-х дедушек и 2-х бабушек и добавляем в список их детей
+        //РЎРѕР·РґР°РµРј РЅРѕРІС‹Р№ РѕР±СЉРµРєС‚ "РѕС‚РµС†"
+        Human otec = new Human("РџРµС‚СЂ", true, 53, deti);
+        //РЎРѕР·РґР°РµРј РЅРѕРІС‹Р№ РѕР±СЉРµРєС‚ "РјР°С‚СЊ"
+        Human matb = new Human("РќР°РґСЏ", false, 45, deti);
+        //РЎРѕР·РґР°РµРј РѕР±СЉРµРєС‚С‹ 2-С… РґРµРґСѓС€РµРє Рё 2-С… Р±Р°Р±СѓС€РµРє Рё РґРѕР±Р°РІР»СЏРµРј РІ СЃРїРёСЃРѕРє РёС… РґРµС‚РµР№
         ArrayList<Human> ded1Temp = new ArrayList<>();
         ded1Temp.add(otec);
-        Human ded1 = new Human("Василий", true, 78, ded1Temp);
+        Human ded1 = new Human("Р’Р°СЃРёР»РёР№", true, 78, ded1Temp);
 
         ArrayList<Human> ded2Temp = new ArrayList<>();
         ded2Temp.add(matb);
-        Human ded2 = new Human("Евгений", true, 81, ded2Temp);
+        Human ded2 = new Human("Р•РІРіРµРЅРёР№", true, 81, ded2Temp);
 
         ArrayList<Human> babka1Temp = new ArrayList<>();
         babka1Temp.add(otec);
-        Human babka1 = new Human("Маруся", false, 75, babka1Temp);
+        Human babka1 = new Human("РњР°СЂСѓСЃСЏ", false, 75, babka1Temp);
 
         ArrayList<Human> babka2Temp = new ArrayList<>();
         babka2Temp.add(matb);
-        Human babka2 = new Human("Татьяна", false, 77, babka2Temp);
-        //Выводим объекты на экран
+        Human babka2 = new Human("РўР°С‚СЊСЏРЅР°", false, 77, babka2Temp);
+        //Р’С‹РІРѕРґРёРј РѕР±СЉРµРєС‚С‹ РЅР° СЌРєСЂР°РЅ
         System.out.println(ded1);
         System.out.println(ded2);
         System.out.println(babka1);
@@ -55,12 +55,12 @@ public class Children
 
     public static class Human
     {
-        //Объявляем в классе Human типы параметров объектов
+        //РћР±СЉСЏРІР»СЏРµРј РІ РєР»Р°СЃСЃРµ Human С‚РёРїС‹ РїР°СЂР°РјРµС‚СЂРѕРІ РѕР±СЉРµРєС‚РѕРІ
         private String name;
         private boolean sex;
         private int age;
         private ArrayList<Human> deti = new ArrayList<Human>();
-        //Задание параметров для объектов
+        //Р—Р°РґР°РЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ РґР»СЏ РѕР±СЉРµРєС‚РѕРІ
         Human(String name, boolean sex, int age)
         {
             this.name = name;
@@ -73,23 +73,23 @@ public class Children
             this.name = name;
             this.sex = sex;
             this.age = age;
-            this.deti.addAll(deti);//Добавление всех объектов deti в список
+            this.deti.addAll(deti);//Р”РѕР±Р°РІР»РµРЅРёРµ РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ deti РІ СЃРїРёСЃРѕРє
         }
 
        @Override
-        //Преобразование объектов в строку
+        //РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РѕР±СЉРµРєС‚РѕРІ РІ СЃС‚СЂРѕРєСѓ
         public String toString()
         {
             String text = "";
-            text += "Имя: " + this.name;
-            text += ", пол: " + (this.sex ? "мужской" : "женский");
-            text += ", возраст: " + this.age;
+            text += "РРјСЏ: " + this.name;
+            text += ", РїРѕР»: " + (this.sex ? "РјСѓР¶СЃРєРѕР№" : "Р¶РµРЅСЃРєРёР№");
+            text += ", РІРѕР·СЂР°СЃС‚: " + this.age;
 
             int childCount = this.deti.size();
-          //Возвращает имя каждого ребенка в списке
+          //Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРјСЏ РєР°Р¶РґРѕРіРѕ СЂРµР±РµРЅРєР° РІ СЃРїРёСЃРєРµ
             if (childCount > 0)
             {
-                text += ", дети: "+this.deti.get(0).name;
+                text += ", РґРµС‚Рё: "+this.deti.get(0).name;
 
                 for (int i = 1; i < childCount; i++)
                 {

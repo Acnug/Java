@@ -4,69 +4,69 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-/* Семья
-Создать класс Human с полями имя(String), пол(boolean),возраст(int), отец(Human), мать(Human). Создать объекты и заполнить их так, чтобы получилось: Два дедушки, две бабушки, отец, мать, трое детей. Вывести объекты на экран.
-Примечание:
-Если написать свой метод String toString() в классе Human, то именно он будет использоваться при выводе объекта на экран.
-Пример вывода:
-Имя: Аня, пол: женский, возраст: 21, отец: Павел, мать: Катя
-Имя: Катя, пол: женский, возраст: 55
-Имя: Игорь, пол: мужской, возраст: 2, отец: Михаил, мать: Аня
-…
+/* РЎРµРјСЊСЏ
+РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ Human СЃ РїРѕР»СЏРјРё РёРјСЏ(String), РїРѕР»(boolean),РІРѕР·СЂР°СЃС‚(int), РѕС‚РµС†(Human), РјР°С‚СЊ(Human). РЎРѕР·РґР°С‚СЊ РѕР±СЉРµРєС‚С‹ Рё Р·Р°РїРѕР»РЅРёС‚СЊ РёС… С‚Р°Рє, С‡С‚РѕР±С‹ РїРѕР»СѓС‡РёР»РѕСЃСЊ: Р”РІР° РґРµРґСѓС€РєРё, РґРІРµ Р±Р°Р±СѓС€РєРё, РѕС‚РµС†, РјР°С‚СЊ, С‚СЂРѕРµ РґРµС‚РµР№. Р’С‹РІРµСЃС‚Рё РѕР±СЉРµРєС‚С‹ РЅР° СЌРєСЂР°РЅ.
+РџСЂРёРјРµС‡Р°РЅРёРµ:
+Р•СЃР»Рё РЅР°РїРёСЃР°С‚СЊ СЃРІРѕР№ РјРµС‚РѕРґ String toString() РІ РєР»Р°СЃСЃРµ Human, С‚Рѕ РёРјРµРЅРЅРѕ РѕРЅ Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ РїСЂРё РІС‹РІРѕРґРµ РѕР±СЉРµРєС‚Р° РЅР° СЌРєСЂР°РЅ.
+РџСЂРёРјРµСЂ РІС‹РІРѕРґР°:
+РРјСЏ: РђРЅСЏ, РїРѕР»: Р¶РµРЅСЃРєРёР№, РІРѕР·СЂР°СЃС‚: 21, РѕС‚РµС†: РџР°РІРµР», РјР°С‚СЊ: РљР°С‚СЏ
+РРјСЏ: РљР°С‚СЏ, РїРѕР»: Р¶РµРЅСЃРєРёР№, РІРѕР·СЂР°СЃС‚: 55
+РРјСЏ: РРіРѕСЂСЊ, РїРѕР»: РјСѓР¶СЃРєРѕР№, РІРѕР·СЂР°СЃС‚: 2, РѕС‚РµС†: РњРёС…Р°РёР», РјР°С‚СЊ: РђРЅСЏ
+вЂ¦
 */
 
 public class Parents {
     public static void main(String[] args) throws IOException
     {
-        //Вводим с клавиатуры имена и возраст членов семьи
+        //Р’РІРѕРґРёРј СЃ РєР»Р°РІРёР°С‚СѓСЂС‹ РёРјРµРЅР° Рё РІРѕР·СЂР°СЃС‚ С‡Р»РµРЅРѕРІ СЃРµРјСЊРё
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Введите имя первого дедушки");
+        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РїРµСЂРІРѕРіРѕ РґРµРґСѓС€РєРё");
         String grandFa1name = reader.readLine();
-        System.out.println("Введите возраст первого дедушки");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ РїРµСЂРІРѕРіРѕ РґРµРґСѓС€РєРё");
         int grandFa1age = Integer.parseInt(reader.readLine());
 
-        System.out.println("Введите имя второго дедушки");
+        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РІС‚РѕСЂРѕРіРѕ РґРµРґСѓС€РєРё");
         String grandFa2name = reader.readLine();
-        System.out.println("Введите возраст второго дедушки");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ РІС‚РѕСЂРѕРіРѕ РґРµРґСѓС€РєРё");
         int grandFa2age = Integer.parseInt(reader.readLine());
 
-        System.out.println("Введите имя первой бабушки");
+        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РїРµСЂРІРѕР№ Р±Р°Р±СѓС€РєРё");
         String grandMa1name = reader.readLine();
-        System.out.println("Введите возраст первой бабушки");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ РїРµСЂРІРѕР№ Р±Р°Р±СѓС€РєРё");
         int grandMa1age = Integer.parseInt(reader.readLine());
 
-        System.out.println("Введите имя второй бабушки");
+        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РІС‚РѕСЂРѕР№ Р±Р°Р±СѓС€РєРё");
         String grandMa2name = reader.readLine();
-        System.out.println("Введите возраст второй бабушки");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ РІС‚РѕСЂРѕР№ Р±Р°Р±СѓС€РєРё");
         int grandMa2age = Integer.parseInt(reader.readLine());
 
-        System.out.println("Введите имя отца");
+        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РѕС‚С†Р°");
         String fatherName = reader.readLine();
-        System.out.println("Введите возраст отца");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ РѕС‚С†Р°");
         int fatherage = Integer.parseInt(reader.readLine());
 
-        System.out.println("Введите имя матери");
+        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РјР°С‚РµСЂРё");
         String motherName = reader.readLine();
-        System.out.println("Введите возраст матери");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ РјР°С‚РµСЂРё");
         int motherage = Integer.parseInt(reader.readLine());
 
-        System.out.println("Введите имя ребенка мужского пола");
+        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ СЂРµР±РµРЅРєР° РјСѓР¶СЃРєРѕРіРѕ РїРѕР»Р°");
         String child1Name = reader.readLine();
-        System.out.println("Введите возраст ребенка мужского пола");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ СЂРµР±РµРЅРєР° РјСѓР¶СЃРєРѕРіРѕ РїРѕР»Р°");
         int child1age = Integer.parseInt(reader.readLine());
 
-        System.out.println("Введите имя ребенка женского пола");
+        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ СЂРµР±РµРЅРєР° Р¶РµРЅСЃРєРѕРіРѕ РїРѕР»Р°");
         String child2Name = reader.readLine();
-        System.out.println("Введите возраст ребенка женского пола");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ СЂРµР±РµРЅРєР° Р¶РµРЅСЃРєРѕРіРѕ РїРѕР»Р°");
         int child2age = Integer.parseInt(reader.readLine());
 
-        System.out.println("Введите имя второго ребенка женского пола");
+        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РІС‚РѕСЂРѕРіРѕ СЂРµР±РµРЅРєР° Р¶РµРЅСЃРєРѕРіРѕ РїРѕР»Р°");
         String child3Name = reader.readLine();
-        System.out.println("Введите возраст второго ребенка женского пола");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚ РІС‚РѕСЂРѕРіРѕ СЂРµР±РµРЅРєР° Р¶РµРЅСЃРєРѕРіРѕ РїРѕР»Р°");
         int child3age = Integer.parseInt(reader.readLine());
        
-        //Создаем объекты с параметрами каждого из членов семьи
+        //РЎРѕР·РґР°РµРј РѕР±СЉРµРєС‚С‹ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё РєР°Р¶РґРѕРіРѕ РёР· С‡Р»РµРЅРѕРІ СЃРµРјСЊРё
         Human grandFa1 = new Human(grandFa1name, true, grandFa1age);
         Human grandFa2 = new Human(grandFa2name, true, grandFa2age);
         Human grandMa1 = new Human(grandMa1name, false, grandMa1age);
@@ -77,7 +77,7 @@ public class Parents {
         Human Child2 = new Human(child2Name, false, child2age, Father, Mother);
         Human Child3 = new Human(child3Name, false, child3age, Father, Mother);
 
-        //Выводим объекты на экран
+        //Р’С‹РІРѕРґРёРј РѕР±СЉРµРєС‚С‹ РЅР° СЌРєСЂР°РЅ
         System.out.println(grandFa1);
         System.out.println(grandFa2);
         System.out.println(grandMa1);
@@ -92,13 +92,13 @@ public class Parents {
 
     public static class Human
     {
-        //Объявляем в классе Human типы параметров объектов
+        //РћР±СЉСЏРІР»СЏРµРј РІ РєР»Р°СЃСЃРµ Human С‚РёРїС‹ РїР°СЂР°РјРµС‚СЂРѕРІ РѕР±СЉРµРєС‚РѕРІ
         private String name;
         private boolean sex;
         private int age;
         private Human father;
         private Human mother;
-        //Задание параметров для объектов с учётом отсутствия матери или отца
+        //Р—Р°РґР°РЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ РґР»СЏ РѕР±СЉРµРєС‚РѕРІ СЃ СѓС‡С‘С‚РѕРј РѕС‚СЃСѓС‚СЃС‚РІРёСЏ РјР°С‚РµСЂРё РёР»Рё РѕС‚С†Р°
         Human(String name, boolean sex, int age)
         {
             this.name = name;
@@ -107,7 +107,7 @@ public class Parents {
             this.father = null;
             this.mother = null;
         }
-        //Задание параметров для объектов с учётом присутствия матери или отца
+        //Р—Р°РґР°РЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ РґР»СЏ РѕР±СЉРµРєС‚РѕРІ СЃ СѓС‡С‘С‚РѕРј РїСЂРёСЃСѓС‚СЃС‚РІРёСЏ РјР°С‚РµСЂРё РёР»Рё РѕС‚С†Р°
         Human(String name, boolean sex, int age, Human father, Human mother)
         {
             this.name = name;
@@ -119,19 +119,19 @@ public class Parents {
 
         @Override
 
-      //Преобразование объектов в строку
+      //РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РѕР±СЉРµРєС‚РѕРІ РІ СЃС‚СЂРѕРєСѓ
         public String toString()
         {
             String text = "";
-            text += "Имя: " + this.name;
-            text += ", пол: " + (this.sex ? "мужской" : "женский");
-            text += ", возраст: " + this.age;
-            //Возвращает имя отца, если он существует
+            text += "РРјСЏ: " + this.name;
+            text += ", РїРѕР»: " + (this.sex ? "РјСѓР¶СЃРєРѕР№" : "Р¶РµРЅСЃРєРёР№");
+            text += ", РІРѕР·СЂР°СЃС‚: " + this.age;
+            //Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРјСЏ РѕС‚С†Р°, РµСЃР»Рё РѕРЅ СЃСѓС‰РµСЃС‚РІСѓРµС‚
             if (this.father != null)
-                text += ", отец: " + this.father.name;
-            //Возвращает имя матери, если она существует
+                text += ", РѕС‚РµС†: " + this.father.name;
+            //Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРјСЏ РјР°С‚РµСЂРё, РµСЃР»Рё РѕРЅР° СЃСѓС‰РµСЃС‚РІСѓРµС‚
             if (this.mother != null)
-                text += ", мать: " + this.mother.name;
+                text += ", РјР°С‚СЊ: " + this.mother.name;
 
             return text;
         }
